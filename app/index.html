@@ -79,6 +79,20 @@
 
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
+
+
+<script>
+(function (window, document) {
+  var loader = function () {
+    var script = document.createElement('script'), tag = document.getElementsByTagName('script')[0];
+    script.src = 'http://10.13.129.39:8000/distro/formWidget.js';
+    tag.parentNode.insertBefore(script, tag);
+  };
+
+  // Wait until window.onload before downloading any more code.
+  window.addEventListener ? window.addEventListener('load', loader, false) : window.attachEvent('onload', loader);
+})(window, document);
+</script>
              
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
@@ -86,7 +100,7 @@
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
 .tg .tg-yw4l{vertical-align:top}
 </style>
-<table class="tg">
+<table class="tg userTable">
   <tr>
     <th class="tg-yw4l">User ID</th>
     <th class="tg-yw4l">Accounts</th>
@@ -95,32 +109,29 @@
     <th class="tg-yw4l">Buttons </th>
   </tr>
   <tr>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l">Sandra Bullock</td>
+    <td class="tg-yw4l">12345678</td>
+    <td class="tg-yw4l">Investor</td>
+    <td class="tg-yw4l">Performance</td>
+    <td class="tg-yw4l">
+      <button class="uploadBtns" id="uploadBtn" onclick="CreateFormFunction('user','advisor',[0,1,2])" >Upload</button>
+    </td>
   </tr>
   <tr>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l">John Wayne</td>
+    <td class="tg-yw4l">11223344, 99887766</td>
+    <td class="tg-yw4l">Advisor</td>
+    <td class="tg-yw4l">New</td>
+    <td class="tg-yw4l">
+      <button class="uploadBtns" data-toggle="modal" data-target="#myModal" id="uploadBtn" onclick="CreateFormFunction('user','advisor',[0,1,2])" >Upload</button>
+    </td>
   </tr>
 </table>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
-              </div>
+
+<div id="sciFormPlaceholder"><div>
+
+
             </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
           </section>
           <section class="section--footer mdl-color--white mdl-grid">
             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
@@ -207,13 +218,12 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
-    <!-- build:js scripts/main.min.js -->
+    <!-- build:js scripts/main.min.js 
     <script src="scripts/vendor/angular/angular.js"></script>
     <script src="scripts/vendor/angular-resource/angular-resource.js"></script>
     <script src="scripts/directives/my-gallery.js"></script>
     <script src="scripts/directives/img-uploader.js"></script>
     <script src="scripts/controllers/pageController.js"></script>
-    <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
